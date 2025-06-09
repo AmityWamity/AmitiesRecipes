@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+    padding-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+}
+.square-container{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+}
+.rotating-square,
+.rotating-square2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+.rotating-square {
+    background-color: black;
+    animation: spin 4s linear infinite;
+}
+.rotating-square2 {
+    background-color: blue;
+    animation: spin2 4s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin2 {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+}
+.menubar {
+    background-color: #222;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.menubar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.menubar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s;
+
+}
+.menubar li a:hover {
+    color: #f39c12;
+}

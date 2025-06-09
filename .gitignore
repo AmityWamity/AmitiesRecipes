@@ -1,0 +1,8 @@
+# Ignore system files
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Node dependencies (if you ever add them)
+node_modules/
